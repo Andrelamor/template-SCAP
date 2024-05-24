@@ -1,6 +1,6 @@
 {
   "version": "4.16.6",
-  "time": 0.141,
+  "time": 0.032,
   "errors": [],
   "tasks": [
     {
@@ -165,13 +165,13 @@
         },
         "scheme": "file",
         "stats": {
-          "hash": "9931bbc1121e55b893d7bfb68f553294",
-          "bytes": 595,
+          "hash": "9e29f8b0a2f261b1a96c8b946dd1c581",
+          "bytes": 592,
           "fields": 22,
           "rows": 2
         }
       },
-      "time": 0.126,
+      "time": 0.018,
       "scope": [
         "hash-count-error",
         "byte-count-error",
