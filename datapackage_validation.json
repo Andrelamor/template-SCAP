@@ -1,0 +1,151 @@
+{
+  "version": "4.16.6",
+  "time": 0.062,
+  "errors": [],
+  "tasks": [
+    {
+      "resource": {
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "teste-scap",
+        "path": "data/teste-SCAP.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "submission_id",
+              "type": "string"
+            },
+            {
+              "name": "respondent_id",
+              "type": "string"
+            },
+            {
+              "name": "submitted_at",
+              "type": "datetime"
+            },
+            {
+              "name": "e_mail",
+              "type": "string"
+            },
+            {
+              "name": "mapdv",
+              "type": "string"
+            },
+            {
+              "name": "nome",
+              "type": "string"
+            },
+            {
+              "name": "adm",
+              "type": "integer"
+            },
+            {
+              "name": "grnaturezaatual",
+              "type": "integer"
+            },
+            {
+              "name": "sqnatureza",
+              "type": "integer"
+            },
+            {
+              "name": "dtinicioatual",
+              "type": "date"
+            },
+            {
+              "name": "dtpublicacaoatual",
+              "type": "date"
+            },
+            {
+              "name": "carreira",
+              "type": "string"
+            },
+            {
+              "name": "nivelatual",
+              "type": "string"
+            },
+            {
+              "name": "simbolo",
+              "type": "string"
+            },
+            {
+              "name": "grau_atual",
+              "type": "string"
+            },
+            {
+              "name": "grnaturezanovo",
+              "type": "integer"
+            },
+            {
+              "name": "sqnaturezanovo",
+              "type": "integer"
+            },
+            {
+              "name": "dtinicionovo",
+              "type": "date"
+            },
+            {
+              "name": "dtfimnovo",
+              "type": "date"
+            },
+            {
+              "name": "dtpublicacaonovo",
+              "type": "date"
+            },
+            {
+              "name": "nivelnovo",
+              "type": "string"
+            },
+            {
+              "name": "graunovo",
+              "type": "string"
+            }
+          ]
+        },
+        "scheme": "file",
+        "stats": {
+          "hash": "9931bbc1121e55b893d7bfb68f553294",
+          "bytes": 595,
+          "fields": 22,
+          "rows": 2
+        }
+      },
+      "time": 0.031,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    }
+  ],
+  "stats": {
+    "errors": 0,
+    "tasks": 1
+  },
+  "valid": true
+}

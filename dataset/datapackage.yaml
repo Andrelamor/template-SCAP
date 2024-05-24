@@ -1,0 +1,57 @@
+profile: data-package
+resources:
+  - dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: teste-scap
+    path: data/teste-SCAP.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: submission_id
+          type: string
+        - name: respondent_id
+          type: string
+        - name: submitted_at
+          type: datetime
+        - name: e_mail
+          type: string
+        - name: mapdv
+          type: string
+        - name: nome
+          type: string
+        - name: adm
+          type: integer
+        - name: grnaturezaatual
+          type: integer
+        - name: sqnatureza
+          type: integer
+        - name: dtinicioatual
+          type: date
+        - name: dtpublicacaoatual
+          type: date
+        - name: carreira
+          type: string
+        - name: nivelatual
+          type: string
+        - name: simbolo
+          type: string
+        - name: grau_atual
+          type: string
+        - name: grnaturezanovo
+          type: integer
+        - name: sqnaturezanovo
+          type: integer
+        - name: dtinicionovo
+          type: date
+        - name: dtfimnovo
+          type: date
+        - name: dtpublicacaonovo
+          type: date
+        - name: nivelnovo
+          type: string
+        - name: graunovo
+          type: string
+    scheme: file
