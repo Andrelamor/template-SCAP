@@ -1,6 +1,6 @@
 {
   "version": "4.16.6",
-  "time": 0.062,
+  "time": 0.141,
   "errors": [],
   "tasks": [
     {
@@ -42,7 +42,14 @@
             },
             {
               "name": "adm",
-              "type": "integer"
+              "type": "integer",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "1",
+                  "2"
+                ]
+              }
             },
             {
               "name": "grnaturezaatual",
@@ -66,7 +73,17 @@
             },
             {
               "name": "nivelatual",
-              "type": "string"
+              "type": "string",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "I",
+                  "II",
+                  "III",
+                  "IV",
+                  "V"
+                ]
+              }
             },
             {
               "name": "simbolo",
@@ -74,7 +91,22 @@
             },
             {
               "name": "grau_atual",
-              "type": "string"
+              "type": "string",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J"
+                ]
+              }
             },
             {
               "name": "grnaturezanovo",
@@ -98,11 +130,36 @@
             },
             {
               "name": "nivelnovo",
-              "type": "string"
+              "type": "string",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "I",
+                  "II",
+                  "III",
+                  "IV",
+                  "V"
+                ]
+              }
             },
             {
               "name": "graunovo",
-              "type": "string"
+              "type": "string",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J"
+                ]
+              }
             }
           ]
         },
@@ -114,7 +171,7 @@
           "rows": 2
         }
       },
-      "time": 0.031,
+      "time": 0.126,
       "scope": [
         "hash-count-error",
         "byte-count-error",

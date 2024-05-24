@@ -24,6 +24,11 @@ resources:
           type: string
         - name: adm
           type: integer
+          constraints:
+            required: true
+            enum:
+            - '1'
+            - '2'
         - name: grnaturezaatual
           type: integer
         - name: sqnatureza
@@ -36,10 +41,31 @@ resources:
           type: string
         - name: nivelatual
           type: string
+          constraints:
+            required: true
+            enum:
+            - 'I'
+            - 'II'
+            - 'III'
+            - 'IV'
+            - 'V'
         - name: simbolo
           type: string
         - name: grau_atual
           type: string
+          constraints:
+            required: true
+            enum:
+            - 'A'
+            - 'B'
+            - 'C'
+            - 'D'
+            - 'E'
+            - 'F'
+            - 'G'
+            - 'H'
+            - 'I'
+            - 'J'
         - name: grnaturezanovo
           type: integer
         - name: sqnaturezanovo
@@ -52,6 +78,27 @@ resources:
           type: date
         - name: nivelnovo
           type: string
+          constraints:
+            required: true
+            enum:
+            - 'I'
+            - 'II'
+            - 'III'
+            - 'IV'
+            - 'V'
         - name: graunovo
           type: string
+          constraints:
+            required: true
+            enum:
+            - 'A'
+            - 'B'
+            - 'C'
+            - 'D'
+            - 'E'
+            - 'F'
+            - 'G'
+            - 'H'
+            - 'I'
+            - 'J'
     scheme: file
