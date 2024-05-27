@@ -1,4 +1,4 @@
-name: CKAN
+name: report
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - 'upload/**'
 
 jobs:
-  publish_update:
+  convert_validate:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
