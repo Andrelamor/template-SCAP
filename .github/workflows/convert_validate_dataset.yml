@@ -63,3 +63,5 @@ jobs:
         uses: ASzc/change-string-case-action@v1
         with:
           string: ${{ github.actor }}
+      - name: Livemark Validation Report
+        run: livemark start
