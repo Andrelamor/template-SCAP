@@ -1,6 +1,6 @@
 {
   "version": "4.16.6",
-  "time": 0.034,
+  "time": 0.035,
   "errors": [],
   "tasks": [
     {
@@ -165,13 +165,13 @@
         },
         "scheme": "file",
         "stats": {
-          "hash": "c4396c94476dd9219796af9ccdbe46dd",
-          "bytes": 3458,
+          "hash": "3851f45ac7209b649d320fbd9bc22d2a",
+          "bytes": 3964,
           "fields": 22,
-          "rows": 19
+          "rows": 22
         }
       },
-      "time": 0.02,
+      "time": 0.022,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -361,16 +361,100 @@
           "note": "constraint \"enum\" is \"['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']\"",
           "message": "The cell \"K\" in row at position \"19\" and field \"graunovo\" at position \"22\" does not conform to a constraint: constraint \"enum\" is \"['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']\"",
           "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "IX",
+          "fieldName": "nivelatual",
+          "fieldNumber": 13,
+          "fieldPosition": 13,
+          "cells": [
+            "qJPar8",
+            "jBVv5Q",
+            "2024-05-13 19:10:04",
+            "andre.amorim@planejamento.mg.gov.br",
+            "teste",
+            "André",
+            "1",
+            "0",
+            "0",
+            "2021-05-13",
+            "2022-05-11",
+            "EPPGG",
+            "IX",
+            "EPPGG",
+            "A",
+            "0",
+            "0",
+            "2024-05-14",
+            "2025-05-13",
+            "2024-05-01",
+            "I",
+            "B"
+          ],
+          "rowNumber": 20,
+          "rowPosition": 21,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['I', 'II', 'III', 'IV', 'V']\"",
+          "message": "The cell \"IX\" in row at position \"21\" and field \"nivelatual\" at position \"13\" does not conform to a constraint: constraint \"enum\" is \"['I', 'II', 'III', 'IV', 'V']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "K",
+          "fieldName": "graunovo",
+          "fieldNumber": 22,
+          "fieldPosition": 22,
+          "cells": [
+            "Pba2pP",
+            "jBVv5Q",
+            "2024-05-24 19:15:54",
+            "andre.amorim@planejamento.mg.gov.br",
+            "1",
+            "André",
+            "1",
+            "0",
+            "0",
+            "2024-05-10",
+            "2024-05-17",
+            "EPPGG",
+            "III",
+            "EPPGG",
+            "C",
+            "2",
+            "2",
+            "2024-05-24",
+            "2028-05-24",
+            "2024-05-19",
+            "V",
+            "K"
+          ],
+          "rowNumber": 22,
+          "rowPosition": 23,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']\"",
+          "message": "The cell \"K\" in row at position \"23\" and field \"graunovo\" at position \"22\" does not conform to a constraint: constraint \"enum\" is \"['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']\"",
+          "description": "A field value does not conform to a constraint."
         }
       ],
       "stats": {
-        "errors": 4
+        "errors": 6
       },
       "valid": false
     }
   ],
   "stats": {
-    "errors": 4,
+    "errors": 6,
     "tasks": 1
   },
   "valid": false
