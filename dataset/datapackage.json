@@ -14,63 +14,56 @@
       "schema": {
         "fields": [
           {
-            "name": "submission_id",
-            "type": "string"
-          },
-          {
-            "name": "respondent_id",
-            "type": "string"
-          },
-          {
-            "name": "submitted_at",
-            "type": "datetime"
-          },
-          {
-            "name": "e_mail",
-            "type": "string"
-          },
-          {
-            "name": "mapdv",
-            "type": "string"
+            "name": "masp",
+            "type": "string",
+            "title": "MASP com dígito verificador",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "nome",
-            "type": "string"
+            "type": "string",
+            "title": "Nome do servidor",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "adm",
             "type": "integer",
+            "title": "Número da admissão",
             "constraints": {
               "required": true,
               "enum": [
                 "1",
-                "2"
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
               ]
             }
           },
           {
-            "name": "grnaturezaatual",
-            "type": "integer"
-          },
-          {
-            "name": "sqnatureza",
-            "type": "integer"
-          },
-          {
-            "name": "dtinicioatual",
-            "type": "date"
-          },
-          {
-            "name": "dtpublicacaoatual",
-            "type": "date"
-          },
-          {
             "name": "carreira",
-            "type": "string"
+            "type": "string",
+            "title": "Sigla do nome da carreira",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "ANE",
+                "ATB",
+                "EEB",
+                "PEB",
+                "TDE"
+              ]
+            }
           },
           {
             "name": "nivelatual",
             "type": "string",
+            "title": "Nível ATUAL da carreira do servidor",
             "constraints": {
               "required": true,
               "enum": [
@@ -78,17 +71,15 @@
                 "II",
                 "III",
                 "IV",
-                "V"
+                "V",
+                "VI"
               ]
             }
           },
           {
-            "name": "simbolo",
-            "type": "string"
-          },
-          {
             "name": "grau_atual",
             "type": "string",
+            "title": "Grau ATUAL da carreira do servidor",
             "constraints": {
               "required": true,
               "enum": [
@@ -101,33 +92,71 @@
                 "G",
                 "H",
                 "I",
-                "J"
+                "J",
+                "K",
+                "L",
+                "M",
+                "N",
+                "O",
+                "P"
               ]
             }
           },
           {
-            "name": "grnaturezanovo",
-            "type": "integer"
+            "name": "grnatureza",
+            "type": "integer",
+            "title": "Grupo da natureza da promoção ou progressão",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "33"
+              ]
+            }
           },
           {
-            "name": "sqnaturezanovo",
-            "type": "integer"
+            "name": "sqnatureza",
+            "type": "integer",
+            "title": "Sequencial da natureza da progressão ou progressão",
+            "constraints": {
+              "enum": [
+                "61",
+                "63",
+                "138",
+                "145",
+                "147",
+                "156",
+                "157",
+                "161",
+                "261",
+                "363",
+                "48",
+                "60",
+                "62",
+                "146",
+                "148",
+                "162",
+                "263"
+              ]
+            }
           },
           {
-            "name": "dtinicionovo",
-            "type": "date"
+            "name": "dtinicio",
+            "type": "date",
+            "constraints": {
+              "required": true
+            }
           },
           {
-            "name": "dtfimnovo",
-            "type": "date"
-          },
-          {
-            "name": "dtpublicacaonovo",
-            "type": "date"
+            "name": "dtpublicacao",
+            "type": "date",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "nivelnovo",
             "type": "string",
+            "title": "Nível NOVO da carreira do servidor",
             "constraints": {
               "required": true,
               "enum": [
@@ -135,13 +164,56 @@
                 "II",
                 "III",
                 "IV",
-                "V"
+                "V",
+                "VI"
+              ]
+            }
+          },
+          {
+            "name": "simbolo",
+            "type": "string",
+            "title": "Símbolo do vencimento correspondente ao nível da carreira",
+            "description": "Corresponde ao atual, para progressão, porque nõa muda nível. E, para promoção, será o nível novo.",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "ANE1",
+                "ANE2",
+                "ANE3",
+                "ANE4",
+                "ANE5",
+                "ANE6",
+                "ATB1",
+                "ATB2",
+                "ATB3",
+                "ATB4",
+                "ATB5",
+                "ATB6",
+                "EEB1",
+                "EEB2",
+                "EEB3",
+                "EEB4",
+                "EEB5",
+                "EEB6",
+                "PEB1",
+                "PEB2",
+                "PEB3",
+                "PEB4",
+                "PEB5",
+                "PEB6",
+                "TDE1",
+                "TDE2",
+                "TDE3",
+                "TDE4",
+                "TDE5",
+                "TDE6"
               ]
             }
           },
           {
             "name": "graunovo",
             "type": "string",
+            "title": "Grau NOVO da carreira do servidor",
             "constraints": {
               "required": true,
               "enum": [
@@ -154,7 +226,13 @@
                 "G",
                 "H",
                 "I",
-                "J"
+                "J",
+                "K",
+                "L",
+                "M",
+                "N",
+                "O",
+                "P"
               ]
             }
           }
