@@ -1,12 +1,12 @@
 {
   "version": "4.16.6",
-  "time": 0.03,
+  "time": 0.029,
   "errors": [],
   "tasks": [
     {
       "resource": {
         "dialect": {
-          "delimiter": ";"
+          "delimiter": ","
         },
         "encoding": "utf-8-sig",
         "format": "csv",
@@ -243,13 +243,13 @@
         },
         "scheme": "file",
         "stats": {
-          "hash": "1944cf1e0b60688cbb45457ec0f5f84f",
+          "hash": "5064f5c7543be32d795b85d4e9aa1aa0",
           "bytes": 368,
           "fields": 13,
           "rows": 4
         }
       },
-      "time": 0.018,
+      "time": 0.017,
       "scope": [
         "hash-count-error",
         "byte-count-error",
