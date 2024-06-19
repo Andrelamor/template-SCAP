@@ -2,7 +2,9 @@
   "profile": "data-package",
   "resources": [
     {
-      "dialect": "schemas/dialect.json",
+      "dialect": {
+        "delimiter": ","
+      },
       "encoding": "utf-8-sig",
       "format": "csv",
       "hashing": "md5",
