@@ -10,14 +10,14 @@ resources:
     profile: tabular-data-resource
     schema:
       fields:
-        - name: masp
-          type: string
-          title: MASP com dígito verificador
-          constraints:
-            required: true
         - name: nome
           type: string
           title: Nome do servidor
+          constraints:
+            required: true
+        - name: masp
+          type: string
+          title: MASP com dígito verificador
           constraints:
             required: true
         - name: adm
@@ -77,6 +77,40 @@ resources:
             - 'N'
             - 'O'
             - 'P'
+        - name: nivelnovo
+          type: string
+          title: Nível NOVO da carreira do servidor
+          constraints:
+            required: true
+            enum:
+            - 'I'
+            - 'II'
+            - 'III'
+            - 'IV'
+            - 'V'
+            - 'VI'
+        - name: graunovo
+          type: string
+          title: Grau NOVO da carreira do servidor
+          constraints:
+            required: true
+            enum:
+            - 'A'
+            - 'B'
+            - 'C'
+            - 'D'
+            - 'E'
+            - 'F'
+            - 'G'
+            - 'H'
+            - 'I'
+            - 'J'
+            - 'K'
+            - 'L'
+            - 'M'
+            - 'N'
+            - 'O'
+            - 'P'
         - name: grnatureza
           type: integer
           title: Grupo da natureza da promoção ou progressão
@@ -106,26 +140,14 @@ resources:
             - '148'
             - '162'
             - '263'
-        - name: dtinicio
-          type: date
-          constraints:
-            required: true
         - name: dtpublicacao
           type: date
           constraints:
             required: true
-        - name: nivelnovo
-          type: string
-          title: Nível NOVO da carreira do servidor
+        - name: dtinicio
+          type: date
           constraints:
             required: true
-            enum:
-            - 'I'
-            - 'II'
-            - 'III'
-            - 'IV'
-            - 'V'
-            - 'VI'
         - name: simbolo
           type: string
           title: Símbolo do vencimento correspondente ao nível da carreira
@@ -163,26 +185,4 @@ resources:
             - 'TDE4'
             - 'TDE5'
             - 'TDE6'
-        - name: graunovo
-          type: string
-          title: Grau NOVO da carreira do servidor
-          constraints:
-            required: true
-            enum:
-            - 'A'
-            - 'B'
-            - 'C'
-            - 'D'
-            - 'E'
-            - 'F'
-            - 'G'
-            - 'H'
-            - 'I'
-            - 'J'
-            - 'K'
-            - 'L'
-            - 'M'
-            - 'N'
-            - 'O'
-            - 'P'
     scheme: file
