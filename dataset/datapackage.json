@@ -3,7 +3,7 @@
   "resources": [
     {
       "dialect": {
-        "delimiter": ";"
+        "delimiter": ","
       },
       "encoding": "utf-8-sig",
       "format": "csv",
