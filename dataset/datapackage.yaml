@@ -1,7 +1,6 @@
 profile: data-package
 resources:
-  - dialect:
-      delimiter:,
+  - dialect: schemas/dialect.json
     encoding: utf-8-sig
     format: csv
     hashing: md5
