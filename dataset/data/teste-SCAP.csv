@@ -1,5 +1,5 @@
-﻿nome;masp;adm;carreira;nivelatual;grau_atual;nivelnovo;graunovo;grnatureza;sqnatureza;dtpublicacao;dtinicio;simbolo
-André;teste;1;EPPGG;I;A;I;B;0;0;2021-05-13;2022-05-11;EPPGG
-Gabriel;12333;1;EPPGG;I;J;III;H;123;456;2024-05-14;2024-05-14;EPPGG
-André;1;1;EPPGG;III;C;V;G;0;0;2024-05-10;2024-05-17;EPPGG
-André;teste;1;EPPGG;I;A;I;B;0;0;2021-05-13;2022-05-11;EPPGG
+﻿nome,masp,adm,carreira,nivelatual,grau_atual,nivelnovo,graunovo,grnatureza,sqnatureza,dtpublicacao,dtinicio,simbolo
+André,teste,1,EPPGG,I,A,I,B,0,0,2021-05-13,2022-05-11,EPPGG
+Gabriel,12333,1,EPPGG,I,J,III,H,123,456,2024-05-14,2024-05-14,EPPGG
+André,1,1,EPPGG,III,C,V,G,0,0,2024-05-10,2024-05-17,EPPGG
+André,teste,1,EPPGG,I,A,I,B,0,0,2021-05-13,2022-05-11,EPPGG
