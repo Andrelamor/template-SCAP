@@ -14,6 +14,13 @@
       "schema": {
         "fields": [
           {
+            "name": "masp-adm",
+            "type": "string",
+            "title": "MASP com admissão acoplados",
+            "constraints": {
+              "required": true
+            },
+          {
             "name": "nome",
             "type": "string",
             "title": "Nome do servidor",
