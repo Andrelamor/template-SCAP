@@ -1,20 +1,976 @@
 {
   "version": "4.16.6",
-  "time": 0.03,
-  "errors": [
+  "time": 0.166,
+  "errors": [],
+  "tasks": [
     {
-      "code": "task-error",
-      "name": "Task Error",
-      "tags": [],
-      "note": "'fieldPosition'",
-      "message": "The task has an error: 'fieldPosition'",
-      "description": "General task-level error."
+      "resource": {
+        "dialect": {
+          "delimiter": ","
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "teste-scap",
+        "path": "data/teste-SCAP.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "masp-adm",
+              "type": "string",
+              "title": "MASP com admissão concatenada",
+              "constraints": {
+                "required": true
+              }
+            },
+            {
+              "name": "nome",
+              "type": "string",
+              "title": "Nome do servidor",
+              "constraints": {
+                "required": true
+              }
+            },
+            {
+              "name": "masp",
+              "type": "string",
+              "title": "MASP com dígito verificador",
+              "constraints": {
+                "required": true
+              }
+            },
+            {
+              "name": "adm",
+              "type": "integer",
+              "title": "Número da admissão",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ]
+              }
+            },
+            {
+              "name": "carreira",
+              "type": "string",
+              "title": "Sigla do nome da carreira",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "ANE",
+                  "ATB",
+                  "EEB",
+                  "PEB",
+                  "TDE"
+                ]
+              }
+            },
+            {
+              "name": "nivelatual",
+              "type": "string",
+              "title": "Nível ATUAL da carreira do servidor",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "I",
+                  "II",
+                  "III",
+                  "IV",
+                  "V",
+                  "VI"
+                ]
+              }
+            },
+            {
+              "name": "grau_atual",
+              "type": "string",
+              "title": "Grau ATUAL da carreira do servidor",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J",
+                  "K",
+                  "L",
+                  "M",
+                  "N",
+                  "O",
+                  "P"
+                ]
+              }
+            },
+            {
+              "name": "nivelnovo",
+              "type": "string",
+              "title": "Nível NOVO da carreira do servidor",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "I",
+                  "II",
+                  "III",
+                  "IV",
+                  "V",
+                  "VI"
+                ]
+              }
+            },
+            {
+              "name": "graunovo",
+              "type": "string",
+              "title": "Grau NOVO da carreira do servidor",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J",
+                  "K",
+                  "L",
+                  "M",
+                  "N",
+                  "O",
+                  "P"
+                ]
+              }
+            },
+            {
+              "name": "grnatureza",
+              "type": "integer",
+              "title": "Grupo da natureza da promoção ou progressão",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "33"
+                ]
+              }
+            },
+            {
+              "name": "sqnatureza",
+              "type": "integer",
+              "title": "Sequencial da natureza da progressão ou progressão",
+              "constraints": {
+                "enum": [
+                  "61",
+                  "63",
+                  "138",
+                  "145",
+                  "147",
+                  "156",
+                  "157",
+                  "161",
+                  "261",
+                  "363",
+                  "48",
+                  "60",
+                  "62",
+                  "146",
+                  "148",
+                  "162",
+                  "263"
+                ]
+              }
+            },
+            {
+              "name": "dtpublicacao",
+              "type": "date",
+              "constraints": {
+                "required": true
+              }
+            },
+            {
+              "name": "dtinicio",
+              "type": "date",
+              "constraints": {
+                "required": true
+              }
+            },
+            {
+              "name": "simbolo",
+              "type": "string",
+              "title": "Símbolo do vencimento correspondente ao nível da carreira",
+              "description": "Corresponde ao atual, para progressão, porque nõa muda nível. E, para promoção, será o nível novo.",
+              "constraints": {
+                "required": true,
+                "enum": [
+                  "ANE1",
+                  "ANE2",
+                  "ANE3",
+                  "ANE4",
+                  "ANE5",
+                  "ANE6",
+                  "ATB1",
+                  "ATB2",
+                  "ATB3",
+                  "ATB4",
+                  "ATB5",
+                  "ATB6",
+                  "EEB1",
+                  "EEB2",
+                  "EEB3",
+                  "EEB4",
+                  "EEB5",
+                  "EEB6",
+                  "PEB1",
+                  "PEB2",
+                  "PEB3",
+                  "PEB4",
+                  "PEB5",
+                  "PEB6",
+                  "TDE1",
+                  "TDE2",
+                  "TDE3",
+                  "TDE4",
+                  "TDE5",
+                  "TDE6"
+                ]
+              }
+            }
+          ]
+        },
+        "scheme": "file",
+        "stats": {
+          "hash": "0391949bd8097c7061ec790b6ec9a454",
+          "bytes": 285627,
+          "fields": 14,
+          "rows": 2985
+        }
+      },
+      "time": 0.153,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "label": "masp_adm",
+          "fieldName": "masp-adm",
+          "fieldNumber": 1,
+          "fieldPosition": 1,
+          "labels": [
+            "masp_adm",
+            "nome",
+            "masp",
+            "adm",
+            "carreira",
+            "nivelatual",
+            "grau_atual",
+            "nivelnovo",
+            "graunovo",
+            "grnatureza",
+            "sqnatureza",
+            "dtpublicacao",
+            "dtinicio",
+            "simbolo"
+          ],
+          "rowPositions": [
+            1
+          ],
+          "code": "incorrect-label",
+          "name": "Incorrect Label",
+          "tags": [
+            "#table",
+            "#header",
+            "#label"
+          ],
+          "note": "",
+          "message": "Label \"masp_adm\" in field masp-adm at position \"1\" does not match the field name in the schema",
+          "description": "One of the data source header does not match the field name defined in the schema."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "98522941",
+            "SELMA BEATRIZ BENTO DUARTE",
+            "9852294",
+            "1",
+            "ANE",
+            "II",
+            "E",
+            "II",
+            "F",
+            "33",
+            "161",
+            "2024-05-15",
+            "2024-04-20",
+            "ANEI2"
+          ],
+          "rowNumber": 447,
+          "rowPosition": 448,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"448\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI3",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "36343834",
+            "ANGELA CARVALHO MUNIZ",
+            "3634383",
+            "4",
+            "ANE",
+            "III",
+            "N",
+            "III",
+            "O",
+            "33",
+            "161",
+            "2024-05-15",
+            "2024-01-02",
+            "ANEI3"
+          ],
+          "rowNumber": 613,
+          "rowPosition": 614,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI3\" in row at position \"614\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI3",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "60989901",
+            "ROSE MARIE CHRISTMAN ARANTES JABER",
+            "6098990",
+            "1",
+            "ANE",
+            "III",
+            "L",
+            "III",
+            "M",
+            "33",
+            "161",
+            "2024-05-15",
+            "2024-03-21",
+            "ANEI3"
+          ],
+          "rowNumber": 782,
+          "rowPosition": 783,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI3\" in row at position \"783\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "105351023",
+            "DANIELLE LOPES DE OLIVEIRA NUNES",
+            "10535102",
+            "3",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2024-03-23",
+            "ANEI2"
+          ],
+          "rowNumber": 798,
+          "rowPosition": 799,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"799\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "59492013",
+            "ANTONIO FRANCISCO DE SOUSA",
+            "5949201",
+            "3",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2023-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 933,
+          "rowPosition": 934,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"934\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI3",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "22375842",
+            "HELIA MOREIRA LUZ",
+            "2237584",
+            "2",
+            "ANE",
+            "III",
+            "J",
+            "III",
+            "L",
+            "33",
+            "161",
+            "2024-05-15",
+            "2024-02-07",
+            "ANEI3"
+          ],
+          "rowNumber": 945,
+          "rowPosition": 946,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI3\" in row at position \"946\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI3",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "114408721",
+            "IVY DANIELLE DE ASSIS VIANA",
+            "11440872",
+            "1",
+            "ANE",
+            "III",
+            "G",
+            "III",
+            "H",
+            "33",
+            "161",
+            "2024-05-15",
+            "2024-02-09",
+            "ANEI3"
+          ],
+          "rowNumber": 951,
+          "rowPosition": 952,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI3\" in row at position \"952\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "58814793",
+            "MARIA ALIPIA DOS SANTOS CASTRO",
+            "5881479",
+            "3",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2022-03-19",
+            "ANEI2"
+          ],
+          "rowNumber": 960,
+          "rowPosition": 961,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"961\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "114318481",
+            "JAQUELINE FERREIRA DE SOUZA",
+            "11431848",
+            "1",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2023-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 1423,
+          "rowPosition": 1424,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"1424\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "45769712",
+            "JOSE DE JESUS SOUZA",
+            "4576971",
+            "2",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2023-03-30",
+            "ANEI2"
+          ],
+          "rowNumber": 1427,
+          "rowPosition": 1428,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"1428\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "123402533",
+            "LAERCIO HERNANE AMORIM GONCALVES",
+            "12340253",
+            "3",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2023-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 1437,
+          "rowPosition": 1438,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"1438\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "139899261",
+            "MARCELO CHAVES",
+            "13989926",
+            "1",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2022-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 1447,
+          "rowPosition": 1448,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"1448\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "106151932",
+            "SEBASTIAO JOSE DA COSTA",
+            "10615193",
+            "2",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2022-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 1491,
+          "rowPosition": 1492,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"1492\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "124607702",
+            "ZENAIDE SOUZA VASCONCELOS RESENDE",
+            "12460770",
+            "2",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2023-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 1515,
+          "rowPosition": 1516,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"1516\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI4",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "108197791",
+            "DOUVANIO DE OLIVEIRA GOMES",
+            "10819779",
+            "1",
+            "ANE",
+            "IV",
+            "G",
+            "IV",
+            "H",
+            "33",
+            "161",
+            "2024-05-15",
+            "2024-02-14",
+            "ANEI4"
+          ],
+          "rowNumber": 1691,
+          "rowPosition": 1692,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI4\" in row at position \"1692\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "66360211",
+            "EDNA DE QUEIROZ MOTA",
+            "6636021",
+            "1",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2023-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 2060,
+          "rowPosition": 2061,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"2061\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "74723433",
+            "MARIA LUIZA DE MIRA CANIZARES",
+            "7472343",
+            "3",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2023-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 2274,
+          "rowPosition": 2275,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"2275\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "96655973",
+            "TATIANE CAMPOS JARDIM",
+            "9665597",
+            "3",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2023-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 2501,
+          "rowPosition": 2502,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"2502\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        },
+        {
+          "cell": "ANEI2",
+          "fieldName": "simbolo",
+          "fieldNumber": 14,
+          "fieldPosition": 14,
+          "cells": [
+            "143245781",
+            "FERNANDA DE MOURA ALMEIDA",
+            "14324578",
+            "1",
+            "ANE",
+            "II",
+            "C",
+            "II",
+            "D",
+            "33",
+            "161",
+            "2024-05-15",
+            "2023-12-31",
+            "ANEI2"
+          ],
+          "rowNumber": 2834,
+          "rowPosition": 2835,
+          "code": "constraint-error",
+          "name": "Constraint Error",
+          "tags": [
+            "#table",
+            "#row",
+            "#cell"
+          ],
+          "note": "constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "message": "The cell \"ANEI2\" in row at position \"2835\" and field \"simbolo\" at position \"14\" does not conform to a constraint: constraint \"enum\" is \"['ANE1', 'ANE2', 'ANE3', 'ANE4', 'ANE5', 'ANE6', 'ATB1', 'ATB2', 'ATB3', 'ATB4', 'ATB5', 'ATB6', 'EEB1', 'EEB2', 'EEB3', 'EEB4', 'EEB5', 'EEB6', 'PEB1', 'PEB2', 'PEB3', 'PEB4', 'PEB5', 'PEB6', 'TDE1', 'TDE2', 'TDE3', 'TDE4', 'TDE5', 'TDE6']\"",
+          "description": "A field value does not conform to a constraint."
+        }
+      ],
+      "stats": {
+        "errors": 20
+      },
+      "valid": false
     }
   ],
-  "tasks": [],
   "stats": {
-    "errors": 1,
-    "tasks": 0
+    "errors": 20,
+    "tasks": 1
   },
   "valid": false
 }
