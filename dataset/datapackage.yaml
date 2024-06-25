@@ -9,7 +9,7 @@ resources:
     profile: tabular-data-resource
     schema:
       fields:
-        - name: masp-adm
+        - name: masp_adm
           type: string
           title: MASP com admissão concatenada
           constraints:
