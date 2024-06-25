@@ -1,6 +1,6 @@
 {
   "version": "4.16.6",
-  "time": 0.166,
+  "time": 0.177,
   "errors": [],
   "tasks": [
     {
@@ -17,7 +17,7 @@
         "schema": {
           "fields": [
             {
-              "name": "masp-adm",
+              "name": "masp_adm",
               "type": "string",
               "title": "MASP com admissão concatenada",
               "constraints": {
@@ -257,7 +257,7 @@
           "rows": 2985
         }
       },
-      "time": 0.153,
+      "time": 0.165,
       "scope": [
         "hash-count-error",
         "byte-count-error",
@@ -280,41 +280,6 @@
       ],
       "partial": false,
       "errors": [
-        {
-          "label": "masp_adm",
-          "fieldName": "masp-adm",
-          "fieldNumber": 1,
-          "fieldPosition": 1,
-          "labels": [
-            "masp_adm",
-            "nome",
-            "masp",
-            "adm",
-            "carreira",
-            "nivelatual",
-            "grau_atual",
-            "nivelnovo",
-            "graunovo",
-            "grnatureza",
-            "sqnatureza",
-            "dtpublicacao",
-            "dtinicio",
-            "simbolo"
-          ],
-          "rowPositions": [
-            1
-          ],
-          "code": "incorrect-label",
-          "name": "Incorrect Label",
-          "tags": [
-            "#table",
-            "#header",
-            "#label"
-          ],
-          "note": "",
-          "message": "Label \"masp_adm\" in field masp-adm at position \"1\" does not match the field name in the schema",
-          "description": "One of the data source header does not match the field name defined in the schema."
-        },
         {
           "cell": "ANEI2",
           "fieldName": "simbolo",
@@ -963,13 +928,13 @@
         }
       ],
       "stats": {
-        "errors": 20
+        "errors": 19
       },
       "valid": false
     }
   ],
   "stats": {
-    "errors": 20,
+    "errors": 19,
     "tasks": 1
   },
   "valid": false
