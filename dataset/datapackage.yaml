@@ -9,6 +9,11 @@ resources:
     profile: tabular-data-resource
     schema:
       fields:
+        - name: masp-adm
+          type: string
+          title: MASP com admissão concatenada
+          constraints:
+            required: true
         - name: nome
           type: string
           title: Nome do servidor
